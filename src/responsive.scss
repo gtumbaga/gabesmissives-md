@@ -1,0 +1,12 @@
+@media handheld, only screen and (max-width: 767px) {
+  #navbar {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    background: #000;
+  }
+  .navbar-default .navbar-nav>li:hover>a,
+  .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    border-color: transparent;
+  }
+}

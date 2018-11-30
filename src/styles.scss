@@ -1,0 +1,360 @@
+/* You can add global styles to this file, and also import other style files */
+
+.mtop10 {
+  margin-top: 10px;
+}
+.max400 {
+  max-width: 400px;
+}
+.nobrad {
+  border-radius: unset !important;
+}
+.nosidepad {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+html {
+  background: #000;
+}
+body {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#002b4f+0,000814+51,002b4f+73,000814+93,000000+100 */
+  background: rgb(0,43,79); /* Old browsers */
+  background: -moz-linear-gradient(45deg,  rgba(0,43,79,1) 0%, rgba(0,8,20,1) 51%, rgba(0,43,79,1) 73%, rgba(0,8,20,1) 93%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg,  rgba(0,43,79,1) 0%,rgba(0,8,20,1) 51%,rgba(0,43,79,1) 73%,rgba(0,8,20,1) 93%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg,  rgba(0,43,79,1) 0%,rgba(0,8,20,1) 51%,rgba(0,43,79,1) 73%,rgba(0,8,20,1) 93%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002b4f', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-attachment: fixed;
+
+  font-family: 'Rajdhani', sans-serif;
+  color: #7FCBFF;
+  font-size: 18px;
+}
+.bg-grid {
+  opacity: .25;
+  background-size: 5px 5px;
+  background-image: linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px);
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+h6 {font-size: 18px}
+h5 {font-size: 20px}
+h4 {font-size: 22px}
+h3 {font-size: 26px}
+h2 {font-size: 30px}
+h1 {font-size: 34px}
+
+a {
+  color: #0077C9;
+  font-weight: bold;
+}
+
+hr {
+  border-top: solid 1px #000;
+  border-bottom: solid 1px #00233D;
+}
+
+/* Customize the label (the container) */
+.checktainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: solid 1px transparent;
+}
+.form-control:focus,
+.checktainer:focus-within {
+  border: solid 1px;
+  border-color: #66afe9;
+
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+
+/* Hide the browser's default checkbox */
+.checktainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark,
+.radiomark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #000;
+  border: solid 1px #000;
+  border-bottom-color: #003f6d;
+}
+
+/* Create a custom radio button */
+.radiomark {
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.checktainer:hover input ~ .checkmark,
+.checktainer:hover input ~ .radiomark {
+  /*background-color: #003C66;*/
+}
+
+/* When the checkbox is checked, add a blue background */
+.checktainer input:checked ~ .checkmark,
+.checktainer input:checked ~ .radiomark {
+  background-color: #000;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after,
+.radiomark:after {
+  content: "";
+  position: absolute;
+  /*display: none;*/
+  display: block;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+/* Show the checkmark when checked */
+.checktainer input:checked ~ .checkmark:after,
+.checktainer input:checked ~ .radiomark:after {
+  /*display: block;*/
+  opacity: 1;
+}
+
+/* Style the checkmark/indicator */
+.checktainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #0077C9;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* Style the indicator (dot/circle) */
+.checktainer .radiomark:after {
+  top: 2px;
+  left: 2px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0077c9+0,000814+60 */
+background: rgb(0,119,201); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(0,119,201,1) 0%, rgba(0,8,20,1) 60%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,119,201,1) 0%,rgba(0,8,20,1) 60%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  rgba(0,119,201,1) 0%,rgba(0,8,20,1) 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0077c9', endColorstr='#000814',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+
+.pretty-outter {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#003f6d+0,000814+100 */
+  background: #003f6d; /* Old browsers */
+  background: -moz-linear-gradient(top,  #003f6d 0%, #000814 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #003f6d 0%,#000814 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #003f6d 0%,#000814 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003f6d', endColorstr='#000814',GradientType=0 ); /* IE6-9 */
+
+  border-radius: 30px;
+  padding: 1px;
+  padding-bottom: 3px;
+  
+  border: solid 4px #000;
+  border-color: #000 !important;
+}
+.pretty-outter.alt1 {
+  border-width: 1px;
+  padding-bottom: 1px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000814+0,003f6d+100 */
+  background: #000814; /* Old browsers */
+  background: -moz-linear-gradient(top,  #000814 0%, #003f6d 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #000814 0%,#003f6d 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #000814 0%,#003f6d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000814', endColorstr='#003f6d',GradientType=0 ); /* IE6-9 */
+}
+.pretty-outter.button {
+  display: inline-block;
+}
+
+.pretty-bar {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#001d31+1,000000+100 */
+  background: #001d31; /* Old browsers */
+  background: -moz-linear-gradient(top,  #001d31 1%, #000000 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #001d31 1%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #001d31 1%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001d31', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 0px;
+}
+.form-control {
+  color: #7FCBFF;
+  background: #000;
+  border-color: #000;
+  border-radius: 30px;
+  max-width: 400px;
+  -webkit-appearance:none;
+  -moz-appearance: none;
+}
+.select-holder {
+  background: #000;
+  border-radius: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.select-holder:focus {
+
+}
+.select-holder select {
+  background: transparent;
+  border: none;
+}
+.select-holder select:focus {
+  webkit-box-shadow: none;
+  box-shadow: none;
+}
+textarea {
+  resize: none;
+  min-height: 200px;
+}
+.text-muted {
+  color: #003C66;
+}
+
+.btn {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#001d31+1,000000+100 */
+  background: #001d31; /* Old browsers */
+  background: -moz-linear-gradient(top,  #001d31 1%, #000000 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #001d31 1%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #001d31 1%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001d31', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  
+  border: none;
+  border-radius: 30px;
+  color: #7FCBFF;
+  font-weight: bold;
+
+  padding: 4px 35px;
+}
+.btn:hover {
+  color: #0077C9;
+}
+
+
+#navbar {
+  border: none;
+}
+.navbar {
+  min-height: 40px;
+}
+.navbar-header {
+  height: 40px;
+}
+.navbar-default .navbar-nav>li>a {
+  border-bottom: solid 2px transparent;
+  border-top: solid 2px transparent;
+  color: inherit;
+  /*padding-top: 10px;*/
+  /*padding-bottom: 10px;*/
+  padding: 10px 40px 10px 40px;
+}
+.navbar-default .navbar-nav>li:hover>a,
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color: #0077C9;
+  background: none;
+  border-bottom-color: #7FCBFF;
+  /*text-shadow: 0 0 3px #7FCBFF;*/
+  /*color: #fff;*/
+}
+.navbar-default .navbar-brand,
+.navbar-default:hover .navbar-brand:hover {
+  color: inherit;
+  font-size: 24px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+ul.navbar-nav li {
+  border-left: solid 1px #001C31;
+}
+ul.navbar-nav li:before {
+  position:absolute;
+  display:block;
+  content:'';
+  border-left: solid 1px #000;
+  height:100%;
+  width:100%;
+  box-sizing: border-box;
+  -moz-box-sizing:
+  border-box; -webkit-box-sizing:
+  border-box;
+}
+.navbar {
+  font-weight: bold;
+  height: 44px;
+}
+.navbar-toggle {
+  margin-bottom: 0px;
+  margin-top: 2px;
+}
+.navbar-toggle button {
+  border-radius: 30px;
+  padding: 8px;
+}
+.navbar-toggle button,
+.navbar-toggle button:focus, .navbar-toggle button:hover {
+  border-color: transparent; 
+  background: #000;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #7FCBFF;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 40px 0;
+}
+
+
+
+
+//GABE'S ADDITIONS
+code, pre {
+  background: #001d31;
+  color: #92d0ff;
+  font-size: 14px;
+  border: solid 1px #003f6d;
+  border-radius: 10px;
+  font-family: 'Share Tech Mono', monospace;
+}
+pre code {
+  border: none !important;
+}
+blockquote {
+  border-color: #0077C9;
+  margin-left: 40px;
+}
