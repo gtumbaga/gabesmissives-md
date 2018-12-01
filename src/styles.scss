@@ -15,6 +15,10 @@
 }
 html {
   background: #000;
+
+  &, body {
+    min-height: 100vh;
+  }
 }
 body {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#002b4f+0,000814+51,002b4f+73,000814+93,000000+100 */
