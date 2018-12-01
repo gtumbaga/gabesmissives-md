@@ -21,7 +21,7 @@ const routes: Routes = [
     component: PageContactComponent
   },
   {
-    path: 'blogpost/:slug',
+    path: 'blogpost/:id',
     component: BlogpostComponent
   },
   {

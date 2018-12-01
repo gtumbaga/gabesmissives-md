@@ -1,33 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-import {DataService} from '../data.service';
-import { Observable } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-blogpost',
   templateUrl: './blogpost.component.html',
   styleUrls: ['./blogpost.component.scss']
 })
-export class BlogpostComponent implements OnInit {
+export class BlogpostComponent implements OnInit, OnDestroy {
 
-  blogpost$: Object;
-  postTitle: string;
-  postBody: string;
+  private sub: Subscription;
+  post: string;
+  dataURL: string;
 
-  constructor(private data: DataService, private route: ActivatedRoute) {
-    this.route.params.subscribe((params) => {
-      this.blogpost$ = params.slug;
-      //console.log(this.blogpost$);
-    });
+  constructor(private route: ActivatedRoute) {
+    this.dataURL = 'https://data.gabesmissives.com/posts/';
   }
 
   ngOnInit() {
-    this.data.getSinglePost(this.blogpost$).subscribe((data) => {
-      this.blogpost$ = data[0];
-      this.postTitle = data[0].title.rendered;
-      this.postBody = data[0].content.rendered;
-      //console.log(data);
+    this.sub = this.route.params.subscribe(params => {
+      //this.post = '../../assets/blog/post/' +  params['id'] + '.md';
+      this.post = this.dataURL +  params['id'] + '.md';
+      //console.log(this.post);
     });
+  }
+
+  ngOnDestroy() {
+    if (this.sub) {
+      this.sub.unsubscribe();
+    }
   }
 
 }

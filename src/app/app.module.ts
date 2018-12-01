@@ -8,6 +8,7 @@ import { BlogpostComponent } from './blogpost/blogpost.component';
 import { BlogpostsComponent } from './blogposts/blogposts.component';
 
 import { AlertModule } from 'ngx-bootstrap';
+import { MarkdownModule } from 'ngx-markdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FooterComponent } from './footer/footer.component';
 import { PageAboutComponent } from './page-about/page-about.component';
@@ -32,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     AlertModule.forRoot(),
     CollapseModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    MarkdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

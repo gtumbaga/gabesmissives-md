@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DataService } from "../data.service";
 
 @Component({
   selector: 'app-page-about',
@@ -8,17 +7,13 @@ import { DataService } from "../data.service";
   styleUrls: ['./page-about.component.scss']
 })
 export class PageAboutComponent implements OnInit {
-  contentAbout = [];
-
-  constructor(public dataService: DataService) {
-
+  pageSrc: string;
+  constructor() {
+    this.pageSrc = "https://data.gabesmissives.com/pages/about.md";
   }
 
   ngOnInit() {
-    this.dataService.getPage(26)
-    .subscribe(data => {
-      this.contentAbout = data["content"]["rendered"];
-    })
+    
   }
 
 }

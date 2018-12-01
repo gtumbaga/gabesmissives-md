@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-front.component.scss']
 })
 export class PageFrontComponent implements OnInit {
-
-  constructor() { }
+  pageSrc: string;
+  
+  constructor() {
+    this.pageSrc = "https://data.gabesmissives.com/pages/front.md";
+  }
 
   ngOnInit() {
   }

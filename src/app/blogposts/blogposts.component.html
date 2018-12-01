@@ -2,13 +2,7 @@
   <div class="row">
     <div class="col-sm-12">
       <section>
-        <h1 class="text-center">Blog Posts</h1>
-        <hr />
-        <ul>
-          <li *ngFor="let bpost of blogposts$">
-            <a routerLink="/blogpost/{{bpost.slug}}">{{ bpost.title.rendered }}</a>
-          </li>
-        </ul>
+        <div markdown [src]="pageSrc"></div>
       </section>
     </div>
   </div>

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from '../data.service';
-import { Observable } from 'rxjs';
-
+//import blogsList  from '../../assets/blog/index.json';
 
 @Component({
   selector: 'app-blogposts',
@@ -9,16 +7,14 @@ import { Observable } from 'rxjs';
   styleUrls: ['./blogposts.component.scss']
 })
 export class BlogpostsComponent implements OnInit {
+  pageSrc: string;
 
+  constructor() {
+    this.pageSrc = "https://data.gabesmissives.com/pages/blogs.md";
 
-  blogposts$: Object;
-
-  constructor(private data: DataService) { }
+  }
 
   ngOnInit() {
-    this.data.getBlogPosts().subscribe(
-      data => this.blogposts$ = data
-    )
   }
 
 }

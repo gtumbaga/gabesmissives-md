@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-contact.component.scss']
 })
 export class PageContactComponent implements OnInit {
-
-  constructor() { }
+  pageSrc: string;
+  constructor() {
+    this.pageSrc = "https://data.gabesmissives.com/pages/contact.md";
+  }
 
   ngOnInit() {
   }
